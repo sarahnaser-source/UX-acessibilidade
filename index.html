@@ -1,11 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segurança Digital para Idosos</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projeto sobre UX e acessibilidade com foco em interfaces inclusivas e práticas acessíveis."
+    />
+    <title>UX e acessibilidade</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">UX e acessibilidade</p>
+        <h1>Desenvolvendo interfaces inclusivas para todos</h1>
+        <p class="hero__text">
+          Boas experiências digitais vão além do visual. Elas precisam ser claras,
+          compreensíveis e funcionais para pessoas com diferentes necessidades.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#praticas">Ver práticas</a>
+          <button class="button button--secondary" id="theme-toggle" type="button" aria-pressed="false">
+            Ativar alto contraste
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="intro" aria-labelledby="intro-title">
+        <h2 id="intro-title">Por que isso importa?</h2>
+        <p>
+          Quando uma interface é pensada com acessibilidade, ela melhora a usabilidade
+          para todos os usuários, inclusive em contextos de distração, baixa conectividade
+          ou limitações temporárias.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Clareza</h3>
+            <p>Texto simples, estrutura lógica e linguagem objetiva reduzem barreiras de compreensão.</p>
+          </article>
+          <article class="card">
+            <h3>Inclusão</h3>
+            <p>Componentes acessíveis favorecem pessoas que usam teclado, leitores de tela ou navegação simplificada.</p>
+          </article>
+          <article class="card">
+            <h3>Confiança</h3>
+            <p>Interfaces previsíveis aumentam a segurança e a sensação de controle do usuário.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="praticas" class="section" aria-labelledby="praticas-title">
+        <h2 id="praticas-title">Práticas essenciais</h2>
+        <ul class="principles">
+          <li><strong>Contraste adequado:</strong> garante legibilidade em diferentes ambientes de leitura.</li>
+          <li><strong>Estrutura semântica:</strong> títulos, listas e botões bem organizados orientam a navegação.</li>
+          <li><strong>Foco visível:</strong> destaca o elemento ativo ao navegar por teclado.</li>
+          <li><strong>Rótulos claros:</strong> campos e ações precisam trazer contexto imediato.</li>
+          <li><strong>Design previsível:</strong> padrões consistentes reduzem erros e ansiedade.</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="exemplo-title">
+        <h2 id="exemplo-title">Exemplo de formulário acessível</h2>
+        <form class="form-card">
+          <div class="field-group">
+            <label for="name">Nome completo</label>
+            <input id="name" name="name" type="text" autocomplete="name" />
+          </div>
+          <div class="field-group">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" />
+          </div>
+          <fieldset class="field-group">
+            <legend>Preferência de contato</legend>
+            <label>
+              <input type="radio" name="contact" value="email" />
+              E-mail
+            </label>
+            <label>
+              <input type="radio" name="contact" value="telephone" />
+              Telefone
+            </label>
+          </fieldset>
+          <button class="button button--primary" type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Projeto desenvolvido para mostrar como UX e acessibilidade caminham juntas.</p>
+      <p>© <span id="year"></span> Interface Inclusiva</p>
+    </footer>
+
+    <div class="sr-only" id="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
